@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const reasons = [
     "You have a creative imagination ✨",
     "You bring stories to life 📖",
