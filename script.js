@@ -30,20 +30,39 @@ reasons.forEach((reason, index) => {
     card.classList.add("reason");
 
     card.innerHTML = `
-        <span class="chapter-no">
-            Chapter ${index + 1}
-        </span>
+    
+    <div class="card-inner">
 
-        <h3>${reason}</h3>
+        <div class="card-front">
 
-        <p>
-            Another page in a wonderful story still being written.
-        </p>
+            <span class="reason-number">
+                REASON ${index + 1}
+            </span>
+
+            <div class="tap-text">
+                Tap To Reveal ✨
+            </div>
+
+        </div>
+
+        <div class="card-back">
+
+            <div class="reason-text">
+                ${reason}
+            </div>
+
+        </div>
+
+    </div>
     `;
 
-    reasonGrid.appendChild(card);
-});
+    card.addEventListener("click", () => {
+        card.classList.toggle("flipped");
+    });
 
+    reasonGrid.appendChild(card);
+
+});
 function surprise() {
 
     alert(
